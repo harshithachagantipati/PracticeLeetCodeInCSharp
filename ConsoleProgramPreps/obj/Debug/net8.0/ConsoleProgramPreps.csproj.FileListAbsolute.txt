@@ -1,0 +1,14 @@
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\bin\Debug\net8.0\ConsoleProgramPreps.exe
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\bin\Debug\net8.0\ConsoleProgramPreps.deps.json
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\bin\Debug\net8.0\ConsoleProgramPreps.runtimeconfig.json
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\bin\Debug\net8.0\ConsoleProgramPreps.dll
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\bin\Debug\net8.0\ConsoleProgramPreps.pdb
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.AssemblyInfo.cs
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.dll
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\refint\ConsoleProgramPreps.dll
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.pdb
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.genruntimeconfig.cache
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ref\ConsoleProgramPreps.dll

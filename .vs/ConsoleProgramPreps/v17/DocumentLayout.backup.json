@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\ConsoleProgramPreps\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27F4C778-678D-4A90-9B08-5BD5747CD8E9}|ConsoleProgramPreps\\ConsoleProgramPreps.csproj|c:\\users\\hp\\source\\repos\\consoleprogrampreps\\consoleprogrampreps\\practice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27F4C778-678D-4A90-9B08-5BD5747CD8E9}|ConsoleProgramPreps\\ConsoleProgramPreps.csproj|solutionrelative:consoleprogrampreps\\practice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27F4C778-678D-4A90-9B08-5BD5747CD8E9}|ConsoleProgramPreps\\ConsoleProgramPreps.csproj|c:\\users\\hp\\source\\repos\\consoleprogrampreps\\consoleprogrampreps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27F4C778-678D-4A90-9B08-5BD5747CD8E9}|ConsoleProgramPreps\\ConsoleProgramPreps.csproj|solutionrelative:consoleprogrampreps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Practice.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ConsoleProgramPreps\\ConsoleProgramPreps\\Practice.cs",
+              "RelativeDocumentMoniker": "ConsoleProgramPreps\\Practice.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ConsoleProgramPreps\\ConsoleProgramPreps\\Practice.cs*",
+              "RelativeToolTip": "ConsoleProgramPreps\\Practice.cs*",
+              "ViewState": "AgIAANMAAAAAY2ZmZmYgwOAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:22:06.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ConsoleProgramPreps\\ConsoleProgramPreps\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleProgramPreps\\Program.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ConsoleProgramPreps\\ConsoleProgramPreps\\Program.cs*",
+              "RelativeToolTip": "ConsoleProgramPreps\\Program.cs*",
+              "ViewState": "AgIAACoAAAAANDMzMzPjvzMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T06:09:57.558Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
