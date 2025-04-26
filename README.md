@@ -1,3 +1,21 @@
+# Hi there 👋 I'm Harshitha!
+
+💻 I'm a passionate Software Developer specialized in C#, .NET, and Full Stack Development.
+
+🌱 Currently improving my Data Structures and Algorithms (DSA) skills.
+
+🚀 Solving LeetCode, practicing building clean code projects, and learning Cloud Technologies.
+
+🌟 My skills:
+- C#, .NET Core
+- Angular, HTML, CSS
+- SQL Server, PostgreSQL
+- Git, GitHub, Azure
+
+💬 Fun Fact: I love playing badminton and exploring tech! 🏸💻
+
+📫 How to **reach me**: chagantipatiharshitha@gmail.com
+
 # Practice LeetCode Problems in C#
 
 This project contains my practice problems from LeetCode, solved using C# and Visual Studio.
