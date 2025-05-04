@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleProgramPreps")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f438b6313bbd552efb032946e715b62b54804fe4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsoleProgramPreps")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsoleProgramPreps")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

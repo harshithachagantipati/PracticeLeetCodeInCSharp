@@ -8,6 +8,7 @@ class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("Hi this is Program file ");
+        int[] nums1 = { 1,1,2,2,3,4,2,5 }; //Array integer
         Practice pc = new Practice();
         //pc.test();
         /*Console.WriteLine("Enter a name to reverse: ");
@@ -41,8 +42,36 @@ class Program
         pc.MergeSort(nums1, m, nums2, n);
         Console.WriteLine("New Array nums 1 is: " + string.Join(",", nums1) + " M value:" + m + " N value: " + n + " Nums2: " + string.Join(",", nums2));
 */
-        
-        RandomsizedSet set = new RandomsizedSet();
+        /*foreach (var items in nums1)
+        {
+            Console.WriteLine("Nums before sort are : " + items);
+        }
+        Console.WriteLine("After removing Duplicates: "+ pc.RemoveDuplicatesInArray2(nums1));
+        foreach (var items in nums1)
+        {
+            Console.WriteLine("Nums after sort are : " + items);
+        }*/
+        //  int majority = pc.MajorityElement(nums1);
+        /*Console.WriteLine("Majority Value: "+ nums1[pc.MajorityElement(nums1)]);*/
+
+        /*Rotate(nums1,2);*/
+        /* nums1 = new int[] { 7, 1, 5, 3, 6, 4 };
+         int stockProfit = MaxProfit(nums1);
+         foreach (int num in nums1)
+         {
+             Console.WriteLine("stock values are: "+num);
+         }
+         Console.WriteLine("Profit is: "+stockProfit);*/
+
+        nums1 = new int[] { 1,2,3,4};
+        int[] res = ProductExceptSelf(nums1);
+        Console.Write("Nums 1,2,3,4 result for ProductExceptSelf: ");
+        foreach (int i in res)
+        {
+            Console.Write("{0} ", i);
+        }
+
+        /*RandomsizedSet set = new RandomsizedSet();
         Console.WriteLine("Insert 10: " + set.Insert(10));  // true
         Console.WriteLine("Insert 20: " + set.Insert(20));  // true
         Console.WriteLine("Insert 10 again: " + set.Insert(10));  // false
@@ -51,7 +80,8 @@ class Program
         Console.WriteLine("Remove 10: " + set.Remove(10));  // true
         Console.WriteLine("Remove 30: " + set.Remove(30));  // false
 
-        Console.WriteLine("Random Element: " + set.GetRandom());
+        Console.WriteLine("Random Element: " + set.GetRandom());*/
+
         /*
                 //example: know how many stars a specific github repository has
                 var starts = new GithubService().GetStars("throw"); // fetch stars from githubservice, has single method getstars() receives repo name 

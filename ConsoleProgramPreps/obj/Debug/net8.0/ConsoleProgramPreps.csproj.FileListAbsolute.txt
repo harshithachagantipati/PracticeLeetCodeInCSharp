@@ -12,3 +12,4 @@ C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.
 C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.pdb
 C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.genruntimeconfig.cache
 C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ref\ConsoleProgramPreps.dll
+C:\Users\hp\source\repos\ConsoleProgramPreps\ConsoleProgramPreps\obj\Debug\net8.0\ConsoleProgramPreps.sourcelink.json

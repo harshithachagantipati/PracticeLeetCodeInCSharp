@@ -186,7 +186,126 @@ namespace ConsoleProgramPreps
                 p--;
             }
         }
-        //leetcoed : 380 Insert Delete GetRandom - use of list, dictionary, Random
+
+        //leetcode - 80. Remove Duplicates from Sorted Array II Medium
+        /*public int RemoveDuplicatesInArray2(int[] nums) //1, 2, 2,2,3, 4, 0, 0 
+        {
+            if (nums.Length <= 2)
+            {
+                return nums.Length;
+            }
+            int k = 2;
+            for (int j = 2; j < nums.Length; j++) 
+            { //[1,1,1,2,2,3]
+                if (nums[j] != nums[k - 2]) //1, 2, 2,2,3, 4, 0, 0 - 2!=1 , 2!=2 no
+                { //1 != 1, 2 != 1, 2 != 1
+                    nums[k++] = nums[j]; //k++ is after the asigning of j : 1,1,2, 2 : - 1,2,2
+                } // k = 3 k++ means K+1 2+1 is 3
+            }
+            return k;
+        }*/
+
+        public int RemoveDuplicatesInArray2(int[] nums)
+        {
+            if(nums.Length <= 0)
+            {
+                return nums.Length;
+            }
+            int k = 2;
+            for(int j = 2; j < nums.Length; j++)
+            {
+                if (nums[j] != nums[k - 2])
+                {
+                    nums[k++] = nums[j];
+                }
+            }
+            return k;
+        }
+
+        //leetcode169 : Majority Number
+        public int MajorityElement(int[] nums)
+        {
+            int value = nums[0], count = 0;
+            foreach (int num in nums)
+            {
+                if (count == 0)
+                {
+                    value = num;
+                }
+                //count += (num == value) ? 1 : -1;  //terinary operation
+                //Above is terinary operation its 1 line code for below 8 lines of code 
+                if (num == value) //1
+                {//2
+                    count++;
+                }//4
+                else //5
+                {//6
+                    count--;
+                }//8
+            }
+            Console.WriteLine("Count : {0} and Value {1}",count,value);
+            return value;
+        }
+
+        //189. Rotate Array - Medium
+        public static void Rotate(int[] nums, int k)
+        {
+            // k = k % nums.Length;
+            // var arr1 = nums.Skip(nums.Length - k); // 5,6,7
+            // var arr2 = nums.Take(nums.Length - k); //1,2,3,4
+            // int[] arr3 = arr1.Concat(arr2).ToArray(); //5,6,7,1,2,3,4
+            // for(int i = 0; i < nums.Length; i++){
+            //     nums[i] = arr3[i];
+            // }
+            //Above Runtime: 4 ms Beats 8.81% and 66 MB very high. so I wanna solve in less memory
+            foreach (int num in nums){
+                Console.WriteLine("Array Before rotate: " + num);
+            }
+            if (nums != null && nums.Length > 0 && k > 0)
+            {
+                k = k % nums.Length;
+                Array.Reverse(nums); // Reverse entire array
+                Helper(nums, 0, k - 1); // reverse array from 0 to k
+                Helper(nums, k, nums.Length - 1); // Reverse the array from k to end of array
+                foreach (int num in nums)
+                {
+                    Console.WriteLine("Array After rotate: " + num);
+                }
+            }
+        }
+        private static void Helper(int[] arr, int start, int end)
+        {
+            while (start < end)
+            {
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+        }
+        // this Above Runtime 1 ms Beats 52.63%
+
+        //121. Best Time to Buy and Sell Stock
+        public static int MaxProfit(int[] prices)
+        {
+            int buyPrice = prices[0]; //7
+            int profit = 0;
+            for (int i = 0; i < prices.Length; i++)
+            { //foreach(int i in prices) {
+                if (prices[i] < buyPrice)
+                { //1
+                    buyPrice = prices[i]; //1
+                }
+                else if (prices[i] - buyPrice > profit)
+                { //1-1 = 0 no 5-1 4, 3-1 2, 6-1 5, 
+                    profit = prices[i] - buyPrice; // 4, 5
+                }
+            }
+            return profit; // 5
+        }
+
+        //leetcode : 380 Insert Delete GetRandom - use of list, dictionary, Random
         public class RandomsizedSet
         {
             private Dictionary<int, int> dict;
@@ -203,9 +322,9 @@ namespace ConsoleProgramPreps
                 if(dict.ContainsKey(val)) // if inserting 20, 10, 
                     return false;
                 else
-                    dict[val] = list.Count; //if inserting 20 k0v20 20 = 0 k-0v-20, 10 = 1 k-1 v-10
+                    dict[val] = list.Count; // If list = [10, 20] (count = 2) if inserting 20 k0v20 20 = 0 k-0v-20, 10 = 1 k-1 v-10
                     list.Add(val); // 20 - 0 , 10 - 1
-                 Console.WriteLine("In Dict value {0} and key ", dict[val]);
+                    Console.WriteLine("In Dict value {0} and key ", dict[val]);
                     return true; //20 , 10
             }
             public bool Remove(int val) //10
@@ -226,58 +345,78 @@ namespace ConsoleProgramPreps
             }            
         }
 
-
-/*
-        //working with members here I have class Practice 
-        //YouTube C# 7 hrs couce 4: 53:37 Members topic using of destructor lets start
-        //member - private field
-        private string memberName;
-        private string jobTitle;
-        private int salary;
-
-        //member - public field
-        public int age;
-
-        //member - property - exposes jobTitle safely - properties start with a capital letter 
-        public string JobTitle { 
-            get
-            {
-                return jobTitle;
-            } 
-            set 
-            { 
-                jobTitle = value;
-            } 
-        }
-        *//*//public - member method - called from other classes
-        public void Introducing(bool isFriend)
+        //238. Product of Array Except Self : Input: nums = [1, 2, 3, 4] Output: [24, 12, 8, 6] Input2:  nums = [-1,1,0,-3,3] Output2: [0, 0, 9, 0, 0]
+        public static int[] ProductExceptSelf(int[] nums)
         {
-            if (isFriend)
-            {
-                SharePrivateInfo();
+            int nLength = nums.Length;
+            int[] result = new int[nLength];
+            //step1: Fill result with left product
+            result[0] = 1; //1,1,2,6
+            for (int i = 1; i < nLength; i++)
+            { //1,2,3 < 4
+                result[i] = result[i - 1] * nums[i - 1]; //1*1, 1*2, 2*3 [1,1,2,6] 
             }
-            else {
-                Console.WriteLine("Hi my Name is {0}, my JobTitle is {1}, and my age is {1}", memberName, jobTitle, age);
+            //step2: fill reult with right product
+            int rightProduct = 1; //1,4,12,24
+            for (int i = nLength - 1; i >= 0; i--)
+            { //4-1 3 >=0, 2,1,0 >=0
+                result[i] *= rightProduct; // result[3] = 6*1, 2 = 2*4, 1 = 1*12, 0 = 1*24 
+                rightProduct *= nums[i]; // 1*4 = 4, 4*3 = 12, 12*2 = 24, 24*1 = 24
             }
+            return result;
         }
-        private void SharePrivateInfo()
-        {
-            Console.WriteLine("My salary is {0}", salary);
-        }
-        //constructor member
-        public Practice()
-        {
-            age = 30;
-            memberName = "licy";
-            salary = 600000;
-            jobTitle = "Developer";
-            Console.WriteLine("Object created");
-        }
-        //member - finalizer - destructor
-        ~Practice() //whee=n ever the object runs out of
-        {
 
-        }*/
+        /*
+                //working with members here I have class Practice 
+                //YouTube C# 7 hrs couce 4: 53:37 Members topic using of destructor lets start
+                //member - private field
+                private string memberName;
+                private string jobTitle;
+                private int salary;
+
+                //member - public field
+                public int age;
+
+                //member - property - exposes jobTitle safely - properties start with a capital letter 
+                public string JobTitle { 
+                    get
+                    {
+                        return jobTitle;
+                    } 
+                    set 
+                    { 
+                        jobTitle = value;
+                    } 
+                }
+                *//*//public - member method - called from other classes
+                public void Introducing(bool isFriend)
+                {
+                    if (isFriend)
+                    {
+                        SharePrivateInfo();
+                    }
+                    else {
+                        Console.WriteLine("Hi my Name is {0}, my JobTitle is {1}, and my age is {1}", memberName, jobTitle, age);
+                    }
+                }
+                private void SharePrivateInfo()
+                {
+                    Console.WriteLine("My salary is {0}", salary);
+                }
+                //constructor member
+                public Practice()
+                {
+                    age = 30;
+                    memberName = "licy";
+                    salary = 600000;
+                    jobTitle = "Developer";
+                    Console.WriteLine("Object created");
+                }
+                //member - finalizer - destructor
+                ~Practice() //whee=n ever the object runs out of
+                {
+
+                }*/
 
     }
 }
