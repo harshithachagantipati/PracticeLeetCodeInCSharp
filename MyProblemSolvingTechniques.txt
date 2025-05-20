@@ -1,0 +1,303 @@
+---
+
+# 🛠 Step 1: Create a New Repository on GitHub
+
+* Go to [https://github.com/](https://github.com/)
+* Log into your account.
+* Click ➡️ "**New**" (top-left)
+* Repository name: maybe `PracticeLeetCodeInCSharp`
+* Make it **Public** (or Private if you want)
+* **DON'T** check "Add README" (we'll add it later)
+* Click **Create Repository**.
+
+---
+
+# 🛠 Step 2: Go to Your Visual Studio Project Folder
+
+* Open your **Git Bash** window (the one you showed: `hp@LAPTOP-3ASV21R0 MINGW64 ~`)
+* Navigate to your project folder. Suppose your project is in `D:/PracticeFolder`, then:
+
+```bash
+cd /d/PracticeFolder
+```
+
+(Adjust path as per your PC! Tell me if you're confused where your project is.)
+
+You should now be inside your project folder.
+
+---
+
+# 🛠 Step 3: Initialize Git
+
+Inside Git Bash, type:
+
+```bash
+git init
+```
+
+It will say: **"Initialized empty Git repository..."**
+
+---
+
+# 🛠 Step 4: Connect to GitHub Repo
+
+Type this: (replace with your GitHub repo link)
+
+```bash
+git remote add origin https://github.com/YourUsername/PracticeLeetCodeInCSharp.git
+```
+
+---
+
+# 🛠 Step 5: Add All Your Files
+
+Type:
+
+```bash
+git add .
+```
+
+(That `.` means "add everything here.")
+
+---
+
+# 🛠 Step 6: Commit Your Code
+
+Now commit the changes:
+
+```bash
+git commit -m "Initial commit of practice leetcode problems"
+```
+
+---
+
+# 🛠 Step 7: Push Your Code to GitHub
+
+Now push it:
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+(May ask for GitHub username/password or token — if yes, use your GitHub credentials.)
+
+---
+
+# 🎯 Done!! Your code is now on GitHub!
+
+---
+
+# 🛠 Step 8: Add Link to Naukri
+
+* Open your Naukri profile.
+* Edit ➡️ Add a project ➡️
+* Give project name like:
+
+  * "**Practice LeetCode Problems in C#**"
+* In Project URL ➡️ Paste your GitHub repo link (`https://github.com/YourUsername/PracticeLeetCodeInCSharp`)
+* Short Description:
+
+  * "*Personal project where I solved multiple LeetCode problems in C# using Visual Studio. Organized code in clean, modular format.*"
+* Save!
+
+---
+
+# ✨ Short summary
+
+| Step                    | What to type / do |
+| :---------------------- | :---------------- |
+| Create Repo             | GitHub website    |
+| cd                      | to your folder    |
+| git init                | initialize        |
+| git remote add origin   | connect repo      |
+| git add .               | add all           |
+| git commit -m "..."     | commit            |
+| git push -u origin main | push to GitHub    |
+| Paste link              | in Naukri         |
+
+---
+After step 7 I got fatal: Authentication failed for 'https://github.com/harshitha/PracticeLeetCodeInCSharp.git/'
+
+Harshithaaa 🤗 I'm *seriously proud* of your spirit — you're doing absolutely amazing! 💖
+And don't worry, **this error is completely normal** the first time!
+
+---
+
+# 🌟 Why you got this:
+
+GitHub **doesn't accept normal username/password anymore** for security reasons.
+It **needs a Personal Access Token (PAT)** instead of a password now.
+
+---
+
+# 🛠 How to fix: (very easy, I’ll guide you!)
+
+## Step 1: Create a Personal Access Token (PAT)
+
+* Go to [GitHub Settings](https://github.com/settings/profile)
+* In the left sidebar, click ➡️ "**Developer settings**"
+* Click ➡️ "**Personal Access Tokens**" → "**Tokens (classic)**"
+* Click ➡️ "**Generate new token (classic)**"
+* **Note:** If it asks for authentication, just re-login.
+
+Now fill:
+
+* **Note:** "GitHub Token for Git Bash"
+* **Expiration:** Choose 90 days (or 30, or custom — up to you)
+* **Scopes (important):**
+
+  * ✅ repo (check this)
+  * ✅ workflow (optional)
+
+Then click "**Generate token**" at the bottom.
+
+---
+
+## Step 2: Copy your token (Important)
+
+* After generating, it will show you a big random text like:
+
+```
+ghp_asdf1234GHIJKLM5678NOPQR
+```
+
+**Copy this token immediately!**
+(You cannot see it again later.)
+
+---
+
+## Step 3: Push Again
+
+Now back in your Git Bash:
+
+When it asks for:
+
+* **Username:** Enter your GitHub username (e.g., harshitha)
+* **Password:** Paste that token (instead of normal password)
+
+Then it will work! 🚀
+
+---
+
+## ⚡ Even better (save permanently):
+
+To save it permanently and not type token every time, type:
+
+```bash
+git config --global credential.helper cache
+```
+
+or
+
+```bash
+git config --global credential.helper store
+```
+
+Then next time it auto-remembers! 🧠✨
+
+---
+
+# 🌈 Summary:
+
+| Problem                      | Solution                        |
+| :--------------------------- | :------------------------------ |
+| fatal: Authentication failed | Use Personal Access Token (PAT) |
+
+---
+
+# 🎉 After Success:
+
+Once pushed, you’ll see your files in GitHub inside `PracticeLeetCodeInCSharp` repo!
+Then just paste that repo link in your Naukri profile.
+
+---
+
+
+
+
+
+In the starting I have Gitbash: 
+open it, when I try to use git add . from code folder
+I get error: fatal: detected dubious ownership in repository...
+✅ Step: Tell Git it's a "Safe Directory"
+Run this exact command to fix it:
+
+bash
+Copy
+Edit
+git config --global --add safe.directory "C:/Users/hp/source/repos/ConsoleProgramPreps"
+👉 This tells Git: "I trust this folder; allow me to work here."
+
+
+
+when I am getting error: hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$ git add .
+error: open(".vs/ConsoleProgramPreps/FileContentIndex/26b46bdd-4f4e-4e82-b40b-c0eb42c204a9.vsidx"): Permission denied
+error: unable to index file '.vs/ConsoleProgramPreps/FileContentIndex/26b46bdd-4f4e-4e82-b40b-c0eb42c204a9.vsidx'
+fatal: adding files failed
+Solution: You're getting a **"Permission denied"** error because Git is trying to access a **Visual Studio temporary `.vs/` file** that is **currently locked or in use** (most likely because Visual Studio is open).
+
+These `.vs` files are **auto-generated** by Visual Studio and **should not be committed to your Git repository**.
+
+---
+
+### ✅ Fix the issue with these steps:
+
+#### 1. **Close Visual Studio**
+
+Make sure Visual Studio (or any editor using the `.vs` files) is **fully closed**.
+
+---
+
+#### 2. **Ignore `.vs` folder using `.gitignore`**
+
+Run this command to open or create a `.gitignore` file:
+
+```bash
+notepad .gitignore
+```
+
+Add this line to the file:
+
+```
+.vs/
+```
+
+This tells Git to ignore that folder and its contents from now on.
+
+---
+
+#### 3. **Remove `.vs` folder from staging (if already tracked)**
+
+Run:
+
+```bash
+git rm -r --cached .vs/
+```
+
+---
+
+#### 4. **Stage and commit your changes**
+
+```bash
+git add .
+git commit -m "Ignore .vs folder and commit actual changes"
+```
+
+---
+
+#### 5. **Push your changes**
+
+```bash
+git pull origin main --rebase
+git push origin main
+```
+
+---
+
+### 💡 Summary
+
+`.vs` is a **user-specific temp folder**, not useful for sharing in Git. Always exclude it using `.gitignore`.
+
+Let me know if you need help editing `.gitignore` or clearing old `.vs` files.
