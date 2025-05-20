@@ -8,7 +8,6 @@ class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("Hi this is Program file ");
-        int[] nums1 = { 1,1,2,2,3,4,2,5 }; //Array integer
         Practice pc = new Practice();
         //pc.test();
         /*Console.WriteLine("Enter a name to reverse: ");
@@ -42,45 +41,72 @@ class Program
         pc.MergeSort(nums1, m, nums2, n);
         Console.WriteLine("New Array nums 1 is: " + string.Join(",", nums1) + " M value:" + m + " N value: " + n + " Nums2: " + string.Join(",", nums2));
 */
-        /*foreach (var items in nums1)
-        {
-            Console.WriteLine("Nums before sort are : " + items);
-        }
-        Console.WriteLine("After removing Duplicates: "+ pc.RemoveDuplicatesInArray2(nums1));
-        foreach (var items in nums1)
-        {
-            Console.WriteLine("Nums after sort are : " + items);
-        }*/
-        //  int majority = pc.MajorityElement(nums1);
-        /*Console.WriteLine("Majority Value: "+ nums1[pc.MajorityElement(nums1)]);*/
+        /* 
+         RandomsizedSet set = new RandomsizedSet();
+         Console.WriteLine("Insert 10: " + set.Insert(10));  // true
+         Console.WriteLine("Insert 20: " + set.Insert(20));  // true
+         Console.WriteLine("Insert 10 again: " + set.Insert(10));  // false
+         Console.WriteLine("Random Element: " + set.GetRandom());
 
-        /*Rotate(nums1,2);*/
-        /* nums1 = new int[] { 7, 1, 5, 3, 6, 4 };
-         int stockProfit = MaxProfit(nums1);
-         foreach (int num in nums1)
+         Console.WriteLine("Remove 10: " + set.Remove(10));  // true
+         Console.WriteLine("Remove 30: " + set.Remove(30));  // false
+
+         Console.WriteLine("Random Element: " + set.GetRandom());*/
+
+        /*int[] numbers = { 5, 10, 45, 23, 87, 33 };
+        //int[] numbers = new int[5]; //checking for null values
+        int maxValue = FindMaxElementInArray(numbers);
+        Console.WriteLine("Maximum element in array is: " + maxValue);*/
+
+        /* int[] numbers = { 5, 10, 11, 45, 23, 87, 11, 10, 20, 33,11 };        
+         int newSize = RemoveDuplicatesInArray(numbers);
+         Console.WriteLine("Array without duplicates");
+         for(int i = 0; i < newSize; i++)
          {
-             Console.WriteLine("stock values are: "+num);
-         }
-         Console.WriteLine("Profit is: "+stockProfit);*/
+             Console.WriteLine(numbers[i]+ " ");
+         }*/
 
-        nums1 = new int[] { 1,2,3,4};
-        int[] res = ProductExceptSelf(nums1);
-        Console.Write("Nums 1,2,3,4 result for ProductExceptSelf: ");
-        foreach (int i in res)
-        {
-            Console.Write("{0} ", i);
-        }
+        /*  int[] numbers = { 5, 0, 11, 45, 23, 0, 87, 11, 10, 20, 33, 11 };
+          moveZerosToEnd(numbers);
+          foreach (int number in numbers)
+          {
+              Console.WriteLine(number +" ");
+          }*/
 
-        /*RandomsizedSet set = new RandomsizedSet();
-        Console.WriteLine("Insert 10: " + set.Insert(10));  // true
-        Console.WriteLine("Insert 20: " + set.Insert(20));  // true
-        Console.WriteLine("Insert 10 again: " + set.Insert(10));  // false
-        Console.WriteLine("Random Element: " + set.GetRandom());
+        /*  int[] numbers = { 5, 0, 11, 45, 23, 0, 87, 11, 10, 20, 33, 11 };
+          moveZerosToEndOfArray(numbers);
+          foreach (int number in numbers)
+          {
+              Console.WriteLine(number + " ");
+          }*/
 
-        Console.WriteLine("Remove 10: " + set.Remove(10));  // true
-        Console.WriteLine("Remove 30: " + set.Remove(30));  // false
 
-        Console.WriteLine("Random Element: " + set.GetRandom());*/
+        /*  int[] numbers = {0, 1, 6, 1, 1, 2, 2, 4, 3, 5, 7, 8 };
+          int missingNumber = FindMissingNumber(numbers);
+          Console.WriteLine("Missing Number is: " + missingNumber);
+  */
+
+        /*      int[] numbers = { 1,3,2,4,6,7 };
+              int missingNumber = FindMissingNumberUsingLinq(numbers);
+              Console.WriteLine("Missing Number is: " + missingNumber);*/
+
+        /*Console.WriteLine("Give a name to check weather pallindrome or not!..");
+        string name = Console.ReadLine();
+        string reversedName = ReversePalindromeOrNot(name);
+        if(name == reversedName) Console.WriteLine(name+": Is a pallindrome after reversed: "+reversedName);
+        else   Console.WriteLine(name + ": Not a pallindrome after reversed: " + reversedName);
+*/
+        /*CoutVowelsConsonents("Harsh");*/
+
+        /* char s = NonRepetingCharacter("");
+         Console.WriteLine("Non Repeating value : "+s);*/
+
+        /* int[] nums = { 1, 2, 3,4,4,4,4,6,2,1,8,0 };
+         FrequencyOfEachElement(nums);*/
+        string n = "aba"; string m = "aab";
+        bool anagram = AnagramString(n, m);
+        Console.WriteLine("Are {0} and {1} Anagrams or not: {2} ", n,m, anagram);
+
 
         /*
                 //example: know how many stars a specific github repository has

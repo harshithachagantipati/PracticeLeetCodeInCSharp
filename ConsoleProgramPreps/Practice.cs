@@ -186,126 +186,7 @@ namespace ConsoleProgramPreps
                 p--;
             }
         }
-
-        //leetcode - 80. Remove Duplicates from Sorted Array II Medium
-        /*public int RemoveDuplicatesInArray2(int[] nums) //1, 2, 2,2,3, 4, 0, 0 
-        {
-            if (nums.Length <= 2)
-            {
-                return nums.Length;
-            }
-            int k = 2;
-            for (int j = 2; j < nums.Length; j++) 
-            { //[1,1,1,2,2,3]
-                if (nums[j] != nums[k - 2]) //1, 2, 2,2,3, 4, 0, 0 - 2!=1 , 2!=2 no
-                { //1 != 1, 2 != 1, 2 != 1
-                    nums[k++] = nums[j]; //k++ is after the asigning of j : 1,1,2, 2 : - 1,2,2
-                } // k = 3 k++ means K+1 2+1 is 3
-            }
-            return k;
-        }*/
-
-        public int RemoveDuplicatesInArray2(int[] nums)
-        {
-            if(nums.Length <= 0)
-            {
-                return nums.Length;
-            }
-            int k = 2;
-            for(int j = 2; j < nums.Length; j++)
-            {
-                if (nums[j] != nums[k - 2])
-                {
-                    nums[k++] = nums[j];
-                }
-            }
-            return k;
-        }
-
-        //leetcode169 : Majority Number
-        public int MajorityElement(int[] nums)
-        {
-            int value = nums[0], count = 0;
-            foreach (int num in nums)
-            {
-                if (count == 0)
-                {
-                    value = num;
-                }
-                //count += (num == value) ? 1 : -1;  //terinary operation
-                //Above is terinary operation its 1 line code for below 8 lines of code 
-                if (num == value) //1
-                {//2
-                    count++;
-                }//4
-                else //5
-                {//6
-                    count--;
-                }//8
-            }
-            Console.WriteLine("Count : {0} and Value {1}",count,value);
-            return value;
-        }
-
-        //189. Rotate Array - Medium
-        public static void Rotate(int[] nums, int k)
-        {
-            // k = k % nums.Length;
-            // var arr1 = nums.Skip(nums.Length - k); // 5,6,7
-            // var arr2 = nums.Take(nums.Length - k); //1,2,3,4
-            // int[] arr3 = arr1.Concat(arr2).ToArray(); //5,6,7,1,2,3,4
-            // for(int i = 0; i < nums.Length; i++){
-            //     nums[i] = arr3[i];
-            // }
-            //Above Runtime: 4 ms Beats 8.81% and 66 MB very high. so I wanna solve in less memory
-            foreach (int num in nums){
-                Console.WriteLine("Array Before rotate: " + num);
-            }
-            if (nums != null && nums.Length > 0 && k > 0)
-            {
-                k = k % nums.Length;
-                Array.Reverse(nums); // Reverse entire array
-                Helper(nums, 0, k - 1); // reverse array from 0 to k
-                Helper(nums, k, nums.Length - 1); // Reverse the array from k to end of array
-                foreach (int num in nums)
-                {
-                    Console.WriteLine("Array After rotate: " + num);
-                }
-            }
-        }
-        private static void Helper(int[] arr, int start, int end)
-        {
-            while (start < end)
-            {
-                int temp = arr[start];
-                arr[start] = arr[end];
-                arr[end] = temp;
-                start++;
-                end--;
-            }
-        }
-        // this Above Runtime 1 ms Beats 52.63%
-
-        //121. Best Time to Buy and Sell Stock
-        public static int MaxProfit(int[] prices)
-        {
-            int buyPrice = prices[0]; //7
-            int profit = 0;
-            for (int i = 0; i < prices.Length; i++)
-            { //foreach(int i in prices) {
-                if (prices[i] < buyPrice)
-                { //1
-                    buyPrice = prices[i]; //1
-                }
-                else if (prices[i] - buyPrice > profit)
-                { //1-1 = 0 no 5-1 4, 3-1 2, 6-1 5, 
-                    profit = prices[i] - buyPrice; // 4, 5
-                }
-            }
-            return profit; // 5
-        }
-
-        //leetcode : 380 Insert Delete GetRandom - use of list, dictionary, Random
+        //leetcoed : 380 Insert Delete GetRandom - use of list, dictionary, Random
         public class RandomsizedSet
         {
             private Dictionary<int, int> dict;
@@ -322,9 +203,9 @@ namespace ConsoleProgramPreps
                 if(dict.ContainsKey(val)) // if inserting 20, 10, 
                     return false;
                 else
-                    dict[val] = list.Count; // If list = [10, 20] (count = 2) if inserting 20 k0v20 20 = 0 k-0v-20, 10 = 1 k-1 v-10
+                    dict[val] = list.Count; //if inserting 20 k0v20 20 = 0 k-0v-20, 10 = 1 k-1 v-10
                     list.Add(val); // 20 - 0 , 10 - 1
-                    Console.WriteLine("In Dict value {0} and key ", dict[val]);
+                 Console.WriteLine("In Dict value {0} and key ", dict[val]);
                     return true; //20 , 10
             }
             public bool Remove(int val) //10
@@ -345,27 +226,217 @@ namespace ConsoleProgramPreps
             }            
         }
 
-        //238. Product of Array Except Self : Input: nums = [1, 2, 3, 4] Output: [24, 12, 8, 6] Input2:  nums = [-1,1,0,-3,3] Output2: [0, 0, 9, 0, 0]
-        public static int[] ProductExceptSelf(int[] nums)
+        public static int FindMaxElementInArray(int[] arr)
         {
-            int nLength = nums.Length;
-            int[] result = new int[nLength];
-            //step1: Fill result with left product
-            result[0] = 1; //1,1,2,6
-            for (int i = 1; i < nLength; i++)
-            { //1,2,3 < 4
-                result[i] = result[i - 1] * nums[i - 1]; //1*1, 1*2, 2*3 [1,1,2,6] 
+            if(arr.Length == 0) return int.MaxValue;
+            int max = arr[0];
+            for(int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
             }
-            //step2: fill reult with right product
-            int rightProduct = 1; //1,4,12,24
-            for (int i = nLength - 1; i >= 0; i--)
-            { //4-1 3 >=0, 2,1,0 >=0
-                result[i] *= rightProduct; // result[3] = 6*1, 2 = 2*4, 1 = 1*12, 0 = 1*24 
-                rightProduct *= nums[i]; // 1*4 = 4, 4*3 = 12, 12*2 = 24, 24*1 = 24
-            }
-            return result;
+            return max;
         }
 
+        //Remove duplicated from Sorted Array
+        public static int RemoveDuplicatesInArray(int[] arr)
+        {
+            HashSet<int> newArr = new HashSet<int>();
+            //Hashset's nature is to only contains/store unique value
+            int index = 0;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if (!newArr.Contains(arr[i]))
+                {
+                    newArr.Add(arr[i]);
+                    arr[index++] = arr[i]; //here index is acts like from 1 cause we are having length
+                    //change values of index in array - can do index++ and arr[index] = arr[i]
+                }
+            }
+            return index;
+        }
+
+        //move all zeros to end of Array - Not Best approach - O(n) Time and O(n) space for new array temp
+        public static void moveZerosToEnd(int[] arr)
+        {
+            int arrLength = arr.Length;
+            int[] tempArray = new int[arrLength]; 
+            //creating new int array to store non zero values at first and zeros at last
+            int tempIndex = 0; //track temp indexes
+            for(int i = 0; i < arrLength; i++)
+            {
+                if( arr[i] != 0)
+                {
+                    tempArray[tempIndex++] = arr[i]; //1st stores non zero values
+                }
+            }
+            while(tempIndex < arrLength)
+            {
+                tempArray[tempIndex++] = 0; //fill remaining temp indexes with zero
+            }
+            for(int i = 0; i < arrLength; i++)
+            {
+                arr[i] = tempArray[i]; //now copy sorted temp data to given array
+            }
+        }
+
+        //move all zeros to end of Array - Best approach - O(n) Time and O(1) space
+        public static void moveZerosToEndOfArray(int[] arr)
+        {
+            int arrLength = arr.Length;
+            //int[] tempArray = new int[arrLength];
+            //creating new int array to store non zero values at first and zeros at last
+            int count = 0; //track temp indexes
+            for (int i = 0; i < arrLength; i++)
+            {
+                if (arr[i] != 0)
+                {
+                    arr[count++] = arr[i]; //1st stores non zero values
+                }
+            }
+            while (count < arrLength)
+            {
+                arr[count++] = 0; //fill remaining temp indexes with zero
+            }
+            /*for (int i = 0; i < arrLength; i++)
+            {
+                arr[i] = tempArray[i]; //now copy sorted temp data to given array
+            }*/
+        }
+
+        //find missing number from  1 to N and 0 to N - O(n) Time and Space Complexity
+        public static int FindMissingNumber(int[] arr)
+        {
+            int n = arr.Length + 1; //missing is 1 so, increase index by only 1
+            int[] hash = new int[n+1]; // create new array to store 
+            for(int i = 0; i < n-1; i++)
+            {
+                hash[arr[i]]++; //add all array values
+            }
+            for(int i = 0; i <= n; i++)
+            {
+                if (hash[i] == 0)
+                {
+                    return i; //returns 0
+                }
+            }
+            return -1; //returns missing value
+        }
+
+        //find missing number from 1 to N using LINQ - O(n) Time and O(1) Space Complexity
+        public static int FindMissingNumberUsingLinq(int[] arr) 
+        {
+            int n = arr.Length+1;
+            int sum = arr.Sum();
+            int expSum = n * (n+1)/2;
+            return expSum - sum; //LINQ works from 1 to N but not zero 0
+        }
+        //Reverse of string and check for pallindrome - reverse of string can be done 2 types
+        //by using char[] array and
+        //by using string of for loop and assign from last character to 1st in new string by using builtin function of ToString() to each iteration of i
+        public static string ReversePalindromeOrNot(string name) {
+            //Method 1 : reverse with string only - O(1) Time and O(n) space
+            /*string reverse = "";
+            for (int i = name.Length - 1; i >= 0; i--) {
+                reverse += name[i].ToString();
+            }
+            return reverse;*/
+
+            //Method 2: reverse the array: convert string to array and reverse it and give rversed string 
+            char[] nameArray = name.ToCharArray();
+            string revArray = string.Empty;
+            for (int i = nameArray.Length - 1; i >= 0; i--)
+            {
+                revArray += nameArray[i]; //characters can append(+) to string to make complete string
+            }
+            return revArray;
+        }
+
+        public static void CoutVowelsConsonents(string name)
+        {
+            if (name != null)
+            {
+                /*
+                //This won't work X I tried we get all consonents but vowels are 0 everytime 
+                //char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+                string vowels = "aeiou";
+                int countVowels = 0;
+                int countConsonents = 0;
+                name.ToLower();
+                for (int i = 0; i < name.Length; i++)
+                {
+                    if (name[i] == vowels[i]) { countVowels++; }
+                    else { countConsonents++; }
+                    
+                }*/
+
+                //This will work because of hashset
+                int countVowels = 0; int countConsonents = 0;
+                HashSet<char> vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
+                name.ToLower();
+                for (int i = 0; i < name.Length; i++)
+                {
+                    if (vowels.Contains(name[i])) { countVowels++; }
+                    else { countConsonents++; }
+                }
+                Console.WriteLine("Vowel Count of name {0} is: {1}", name, countVowels);
+                Console.WriteLine("Consonents Count of name {0} is: {1}", name, countConsonents);
+
+            }
+        }
+
+        //Find the 1st non-repeating character O(n^2) Time and O(1) space
+        public static char NonRepetingCharacter(string name) {
+            Dictionary<char, int> charCount = new Dictionary<char, int>();
+            foreach(char c in name)
+            {
+                if (charCount.ContainsKey(c)) { charCount[c]++; }
+                else { charCount[c] = 1; }
+            }
+            foreach(char c in name)
+            {
+                if (charCount[c] == 1) { return c; }
+            }
+            return '_';
+        }
+        //Frequency of each element in an array
+        public static void FrequencyOfEachElement(int[] nums) //for chars char[] chars
+        {
+            var freqCount = new Dictionary<int, int>(); //can have chars also <char, int>
+            foreach (var item in nums)
+            {
+                if (freqCount.ContainsKey(item)) { freqCount[item]++; }
+                else { freqCount[item] = 1; }
+            }
+            foreach(var item in freqCount)
+            {
+                Console.WriteLine("Element : Frequency");
+                Console.WriteLine($"{item.Key} : {item.Value}");
+            }
+        }
+        //Anagrams check - O(n) - Time O(1) - Space Complexity
+        public static bool AnagramString(string s1, string s2)
+        {
+            if (s1.Length != s2.Length) { return false; }
+            Dictionary<char, int> countMap = new Dictionary<char, int>();
+            foreach (char c in s1) // Count frequency of each character in s1
+            {
+                if (countMap.ContainsKey(c)) { countMap[c]++; }
+                else
+                {
+                    countMap[c] = 1;
+                }
+            } 
+            foreach (char c in s2) // Subtract frequency based on characters in s2
+            {
+                if (!countMap.ContainsKey(c)) { return false; }
+                countMap[c]--;  // If count goes below zero, it's not an anagram
+                if (countMap[c] < 0) { return false; }
+            }
+            return true;
+        }
         /*
                 //working with members here I have class Practice 
                 //YouTube C# 7 hrs couce 4: 53:37 Members topic using of destructor lets start
