@@ -1,3 +1,42 @@
+/*Git Basic commands to push changes*/
+hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$ git add .
+$ git commit -m "added Problem solving Techniques file"
+$ git pull origin main --rebase
+$ git push origin main
+
+Example: 
+hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$ git add .
+
+hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$ git commit -m "added Problem solving Techniques file"
+[main 44f19d9] added Problem solving Techniques file
+ 1 file changed, 303 insertions(+)
+ create mode 100644 MyProblemSolvingTechniques.txt
+
+hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$ git pull origin main --rebase
+From https://github.com/harshithachagantipati/PracticeLeetCodeInCSharp
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+
+hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.16 KiB | 3.17 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/harshithachagantipati/PracticeLeetCodeInCSharp.git
+   0e69c56..44f19d9  main -> main
+
+hp@LAPTOP-3ASV21R0 MINGW64 ~/source/repos/ConsoleProgramPreps (main)
+$
+
+
 ---
 
 # 🛠 Step 1: Create a New Repository on GitHub
