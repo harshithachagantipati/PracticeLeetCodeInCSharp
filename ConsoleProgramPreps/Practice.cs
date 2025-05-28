@@ -437,6 +437,59 @@ namespace ConsoleProgramPreps
             }
             return true;
         }
+
+        //Find a Pair With a Given Sum - prefer 2 pointer approach, requirement is array should be sorted - O(n) Time,O(1) space 
+        public static bool TargetSumofArrayPair(int[] arr, int target)
+        {
+            int left = 0;
+            int right = arr.Length - 1;
+            while (left < right) { 
+                int sum = arr[left] + arr[right];
+                if(sum == target) 
+                {
+                    Console.WriteLine("The pair of sum is: " + arr[left]+" and " + arr[right]);
+                    return true;
+                }
+                else if (sum > target)
+                    right--;
+                else
+                    left++;
+            }
+            Console.WriteLine("Pair of sum not found.");
+            return false;
+        }
+        //Binary Search in searching and sorting technique - prerequisit: Array must be sorted by ascending or descending
+        //Split array into 2 by using mid, search for given element in array
+        public static int BinarySearch(int[] num, int target)
+        {
+            int low = 0;
+            int high = num.Length - 1;
+            while (low <= high) {
+                int mid = low + (high - low) / 2;
+                if(num[mid] == target)
+                    return mid;
+                else if(num[mid] < target)
+                    low = mid + 1;
+                else
+                    high = mid - 1;
+            }
+            return -1;
+        }
+        public static void ReverseFromIndex(int[] arr, int m){
+            int start = m;
+            int end = arr.Length - 1;
+            while (start < end)
+            {
+                int temp = arr[start]; arr[start] = arr[end]; arr[end] = temp;
+                start++;
+                end--;
+            }
+            Console.WriteLine("The Array is: ");
+            foreach (int n in arr) {
+                Console.WriteLine(n+" ");
+            }
+        }
+
         /*
                 //working with members here I have class Practice 
                 //YouTube C# 7 hrs couce 4: 53:37 Members topic using of destructor lets start

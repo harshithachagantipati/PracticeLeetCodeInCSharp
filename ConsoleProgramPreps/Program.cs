@@ -103,9 +103,19 @@ class Program
 
         /* int[] nums = { 1, 2, 3,4,4,4,4,6,2,1,8,0 };
          FrequencyOfEachElement(nums);*/
-        string n = "aba"; string m = "aab";
+
+        /*string n = "aba"; string m = "aab";
         bool anagram = AnagramString(n, m);
-        Console.WriteLine("Are {0} and {1} Anagrams or not: {2} ", n,m, anagram);
+        Console.WriteLine("Are {0} and {1} Anagrams or not: {2} ", n,m, anagram);*/
+        /*int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+        int target = 9;
+        bool result = TargetSumofArrayPair(nums, target);
+        Console.WriteLine("True or False?:"+result);*/
+        /*int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+        int n = BinarySearch(nums, 6);
+        Console.WriteLine("The searched value is in index of {0} and value is {1}",n, nums[n]);*/
+        int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+        ReverseFromIndex(nums, 3);
 
 
         /*
