@@ -490,6 +490,38 @@ namespace ConsoleProgramPreps
             }
         }
 
+        //Reverse a Linked List
+        public class Node
+        {
+            public int val;
+            public Node next;
+            public Node(int val)
+            {
+                this.val = val;
+                this.next = null;
+                Console.WriteLine(val+" ");
+            }
+        }
+            public static Node reverse_List(Node head)
+            {
+                if (head == null || head.next == null) //edge case : empty list or only 1 value node list
+                {
+                    return head;
+                }
+                Node prev = null;
+                Node current = head;
+                while (current != null)
+                {
+                    Node next = current.next;
+                    current.next = prev;
+                    prev = current;
+                    current = next;
+                }
+                return prev;
+            }
+
+
+
         /*
                 //working with members here I have class Practice 
                 //YouTube C# 7 hrs couce 4: 53:37 Members topic using of destructor lets start

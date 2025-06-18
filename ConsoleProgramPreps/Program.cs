@@ -114,9 +114,26 @@ class Program
         /*int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
         int n = BinarySearch(nums, 6);
         Console.WriteLine("The searched value is in index of {0} and value is {1}",n, nums[n]);*/
-        int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
-        ReverseFromIndex(nums, 3);
+        /*int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+        ReverseFromIndex(nums, 3);*/
 
+        Console.WriteLine("LinkedList Before Reverse: ");
+        Node head = new Node(8);
+        head.next = new Node(1);
+        head.next.next = new Node(2);
+        head.next.next.next = new Node(3);
+        head.next.next.next.next= new Node(4);
+        head.next.next.next.next.next = new Node(5);
+        
+        head = reverse_List(head);
+        Node current = head;
+        Console.WriteLine("Linked List After Reverse: ");
+        while (current != null)
+        {
+            Console.WriteLine(current.val + " ");
+            current = current.next;
+        }
+        Console.WriteLine(  );
 
         /*
                 //example: know how many stars a specific github repository has
